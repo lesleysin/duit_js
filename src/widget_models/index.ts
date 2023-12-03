@@ -7,4 +7,5 @@ export { CenterUiElement } from "./center";
 export { ElevatedButtonUiElement } from "./elevated_button";
 export { TextFieldUiElement } from "./text_field";
 export { StackUiElement } from "./stack";
+export {PaddingUiElement} from "./padding"
 export * from "./custom";

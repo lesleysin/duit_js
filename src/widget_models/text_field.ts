@@ -1,14 +1,14 @@
-import { DuitLeafElement, SingleChildLayout } from "./child";
+import { DuitLeafElement } from "./child";
 import DuitElementType from "../lib/element_type";
 
-import type { TextFieldAttributes } from "../attributes";
+import type { PaddingAttributes } from "../attributes";
 import { BaseAction } from "../lib/action";
 
 export class TextFieldUiElement extends DuitLeafElement {
-    type = DuitElementType.textField as const;
-    attributes: TextFieldAttributes;
+    type = DuitElementType.padding as const;
+    attributes: PaddingAttributes;
 
-    constructor(attrs: TextFieldAttributes, id: string, action: BaseAction) {
+    constructor(attrs: PaddingAttributes, id: string, action: BaseAction) {
         super(id, action, true);
         this.attributes = attrs;
     }

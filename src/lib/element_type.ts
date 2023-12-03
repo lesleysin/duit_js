@@ -11,6 +11,7 @@ enum DuitElementType {
     custom = "Custom",
     stack = "Stack",
     expanded = "Expanded",
+    padding = "Padding",
   }
 
 export default DuitElementType;
