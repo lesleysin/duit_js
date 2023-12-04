@@ -12,6 +12,7 @@ enum DuitElementType {
     stack = "Stack",
     expanded = "Expanded",
     padding = "Padding",
+    positioned = "Positioned",
   }
 
 export default DuitElementType;

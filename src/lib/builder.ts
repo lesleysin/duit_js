@@ -63,4 +63,8 @@ const mayHaveChildList = new Set([
   DuitElementType.row,
   DuitElementType.sizedBox,
   DuitElementType.elevatedButton,
+  DuitElementType.expanded,
+  DuitElementType.padding,
+  DuitElementType.positioned,
+  DuitElementType.stack,
 ]);
