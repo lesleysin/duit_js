@@ -13,6 +13,7 @@ enum DuitElementType {
     expanded = "Expanded",
     padding = "Padding",
     positioned = "Positioned",
+    decoratedBox = "DecoratedBox"
   }
 
 export default DuitElementType;

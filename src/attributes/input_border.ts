@@ -1,15 +1,9 @@
-import { Color } from "../utils/color";
+import { Border, BorderSide } from "./border";
 
-type Border = "outline" | "underline";
-type BorderStyle = "solid" | "none";
 export interface InputBorder {
     type: Border;
     options?: {
-        borderSide?: {
-            color?: Color;
-            width?: number;
-            style?: BorderStyle;
-        }
+        borderSide?: BorderSide;
         gapPadding: number;
         borderRadius: number;
     }
