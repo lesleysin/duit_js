@@ -1,3 +1,4 @@
+export { CheckBoxUiElement } from "./checkbox";
 export { ColoredBoxUiElement } from "./colored_box";
 export { ColumnUiElement } from "./column";
 export { RowUiElement } from "./row";
