@@ -12,4 +12,5 @@ export { PaddingUiElement } from "./padding";
 export { ExpandedUiElement } from "./expanded";
 export { PositionedUiElement } from "./positioned";
 export { DecoratedBoxUiElement } from "./decorated_box";
+export { ContainerUiElement } from "./container";
 export * from "./custom";

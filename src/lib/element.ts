@@ -1,4 +1,4 @@
-import { CenterUiElement, CheckBoxUiElement, ColoredBoxUiElement, ColumnUiElement, DecoratedBoxUiElement, ExpandedUiElement, PaddingUiElement, PositionedUiElement, RowUiElement, SizedBoxUiElement, StackUiElement, TextFieldUiElement, TextUiElement } from "../widget_models";
+import { CenterUiElement, CheckBoxUiElement, ColoredBoxUiElement, ColumnUiElement, ContainerUiElement, DecoratedBoxUiElement, ExpandedUiElement, PaddingUiElement, PositionedUiElement, RowUiElement, SizedBoxUiElement, StackUiElement, TextFieldUiElement, TextUiElement } from "../widget_models";
 
 export type DuitLayoutElement =
     ColumnUiElement
@@ -10,6 +10,7 @@ export type DuitLayoutElement =
     | ExpandedUiElement
     | PaddingUiElement
     | DecoratedBoxUiElement
+    | ContainerUiElement
     | PositionedUiElement;
 
 export type DuitElement =
