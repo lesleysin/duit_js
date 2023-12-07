@@ -16,6 +16,7 @@ enum DuitElementType {
     decoratedBox = "DecoratedBox",
     checkBox = "CheckBox",
     container = "Container",
+    image = "Image",
   }
 
 export default DuitElementType;

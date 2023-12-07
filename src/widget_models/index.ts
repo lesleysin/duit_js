@@ -13,4 +13,5 @@ export { ExpandedUiElement } from "./expanded";
 export { PositionedUiElement } from "./positioned";
 export { DecoratedBoxUiElement } from "./decorated_box";
 export { ContainerUiElement } from "./container";
+export { ImageUiElement } from "./image";
 export * from "./custom";

@@ -10,3 +10,4 @@ export { PaddingAttributes } from "./padding_attributes";
 export { PositionedAttributes } from "./positioned_attributes";
 export { CheckboxAttributes } from "./checkbox_attributes";
 export { ContainerAttributes } from "./container_attributes";
+export { ImageAttributes } from "./image_attributes";
