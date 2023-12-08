@@ -2,8 +2,8 @@ enum ServerEventType {
     update = "update",
   }
 
-export class ServerEvent {
-
+export abstract class ServerEvent {
+    abstract type: ServerEventType;
 }
 
 export class UpdateEvent extends ServerEvent {

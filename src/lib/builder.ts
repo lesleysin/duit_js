@@ -18,6 +18,13 @@ export default class UIBuilder {
     }
   }
 
+  /**
+   * Creates a root element of the exact specified type and returns it.
+   *
+   * @param {DuitElementType} type - The type of the root element to create.
+   * @param {any} rootAttributes - The attributes to pass to the root element constructor.
+   * @return {DuitLayoutElement} The created root element.
+   */
   createRootOfExactType(
     type: DuitElementType,
     rootAttributes: any
@@ -43,14 +50,29 @@ export default class UIBuilder {
     return new ColumnUiElement(rootAttributes);
   }
 
+  /**
+   * Creates a root element and assigns it to the "root" property.
+   *
+   * @return {ColumnUiElement} The newly created root element.
+   */
   createRoot(): ColumnUiElement {
     return this.root = new ColumnUiElement({});
   }
 
+  /**
+   * Returns the root element of the layout.
+   *
+   * @return {DuitLayoutElement | undefined} The root element of the layout, or undefined if there is no root element.
+   */
   getRoot(): DuitLayoutElement | undefined {
     return this.root;
   }
 
+  /**
+   * Builds and returns a JSON string representation of the root object.
+   *
+   * @return {string} A JSON string representation of the root object.
+   */
   build(): string {
     return JSON.stringify(this.root);
   }
@@ -67,4 +89,6 @@ const mayHaveChildList = new Set([
   DuitElementType.padding,
   DuitElementType.positioned,
   DuitElementType.stack,
+  DuitElementType.decoratedBox,
+  DuitElementType.container,
 ]);

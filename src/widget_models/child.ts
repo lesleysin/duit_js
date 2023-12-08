@@ -27,6 +27,12 @@ export class SingleChildLayout extends DuitLeafElement {
     super(id, action, controlled);
   }
 
+  /**
+   * Adds a child element to the current element.
+   *
+   * @param {T} child - The child element to be added.
+   * @return {this} Returns the current element with the child added.
+   */
   addChild<T extends DuitElement>(child: T): this {
     this.child = child;
     return this;
@@ -41,12 +47,23 @@ export class MultiChildLayout extends DuitLeafElement {
     super(id, action, controlled);
   }
 
+  /**
+   * Adds a child element to the current element.
+   *
+   * @param {T} child - The child element to be added.
+   * @return {this} - The current element with the child added.
+   */
   addChild<T extends DuitElement>(child: T): this {
     this.children?.push(child);
     return this;
   }
 
-  addChildren<T extends DuitElement>(...children: T[]): this
+  /**
+ * Adds children to the element.
+ *
+ * @param {T[]} children - An array of DuitElement objects to be added as children.
+ * @return {this} - The updated instance of the class.
+ */
   addChildren<T extends DuitElement>(children: T[] = []): this {
     children.forEach((child) => this.children?.push(child));
     return this;
