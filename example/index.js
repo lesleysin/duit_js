@@ -8,12 +8,10 @@ const { TextUiElement } = require("duit_js");
 const { CenterUiElement } = require("duit_js");
 const { RowUiElement } = require("duit_js");
 const { ElevatedButtonUiElement } = require("duit_js");
-const { HttpAction } = require("duit_js");
-const { ColumnUiElement } = require("duit_js");
-const { randomUUID } = require("crypto");
-const { TextFieldUiElement } = require("duit_js");
 const bodyParser = require("body-parser");
-const form1 = require("./src/form1");
+const decoreatedBoxExample = require("./src/dec_box_ex");
+const inputs = require("./src/inputs");
+const imgViewExample = require("./src/img");
 
 const app = express();
 
@@ -28,116 +26,56 @@ app.use(bodyParser.json())
 
 const router = new express.Router();
 
-router.get("/layout", function (req, res) {
-   console.log(req.headers);
-   const layout = createDynamicDuitViewHttp();
+router.get("/decoratedbox", function (req, res) {
+   console.log("request decoratedbox")
+   const layout = decoreatedBoxExample();
    res.status(200).send(layout);
 });
-router.get("/form1", function (req, res) {
-   console.log(req.headers);
-   const layout = form1();
+
+router.get("/inputs", function (req, res) {
+   console.log("request inputs")
+   const layout = inputs();
    res.status(200).send(layout);
 });
-router.get("/test1", function (req, res) {
-   console.log("ACTION OK")
-   res.status(200).send(JSON.stringify(new UpdateEvent({ "mainRow": {mainAxisAlignment: "spaceEvenly"} })));
-});
-router.post("/action1", function (req, res) {
-   console.log(req.body);
+router.get("/textInput1change", function (req, res) {
    console.log(req.url);
-   console.log(req.method);
-   res.send({});
+   res.status(200).send({});
 });
+router.post("/textInput2change", function (req, res) {
+   console.log(req.body);
+   res.status(200).send({});
+});
+router.post("/apply", function (req, res) {
+   console.log(req.body);
+   const {value1, value2, checkbox} = req.body;
+   const update = new UpdateEvent(
+      {
+         "text1": {
+            data: value1
+         },
+         "text2": {
+            data: value2
+         },
+         "text3": {
+            data: checkbox ? "checked" : "unchecked"
+         },
+      }
+   )
+   res.status(200).send(JSON.stringify(update));
+});
+
+router.get("/img", function (req, res) {
+   console.log("request img")
+   const layout = imgViewExample();
+   res.status(200).send(layout);
+});
+
 
 app.use(router);
 
 const server = http.createServer(app);
 
 const webSocketServer = new WebSocket.Server({ server });
-
-function createDynamicDuitViewHttp() {
-   //create UIBuilder instance
-   const builder = DuitView.builder();
-
-   const customWidget = new ExampleCustomWidget({"random": "string from custom widget"}, "ExampleCustomWidget");
-
-   //create child elements tree
-   const sizedBoxWithCentredText = new RowUiElement({ mainAxisAlignment: "center" }, "mainRow", undefined, true)
-      .addChild(new SizedBoxUiElement({ width: 300 })
-         .addChild(new ColoredBoxUiElement({ color: "#DCDCDC" })
-            .addChild(new ColumnUiElement({mainAxisAlignment: "spaceEvenly"})
-               .addChild(new ColumnUiElement({})
-                  .addChild(new TextUiElement({
-                     data: "Акция!",
-                     textAlign: "center",
-                     style: {
-                        fontSize: 26,
-                        color: "#FFFFFF",
-                        
-                     }
-                  }))
-                  .addChild(new TextUiElement({
-                     data: "ТОЛЬКО СЕГОДНЯ И БОЛЬШЕ НИКОГДА!!!!!!!!", 
-                     textAlign: "center", 
-                     style: {
-                        fontSize: 21, 
-                        color: "#3d1717",
-                     }
-                  }))
-               )
-               .addChild(new ColumnUiElement({})
-               .addChildren([
-                  new SizedBoxUiElement({height: 24,}),
-                  new TextUiElement({data: "КУПИ 3 ПИРОЖКА ПО ЦЕНЕ 4!"}),
-                  new SizedBoxUiElement({height: 24}),
-                  customWidget,
-                  new SizedBoxUiElement({height: 24,}),
-                  new TextUiElement({data: "АКЦИЯ ЧТО НАДО!"}),
-                  new SizedBoxUiElement({height: 24,}),
-                  new SizedBoxUiElement({width: 250, height: 45})
-                     .addChild(new TextFieldUiElement({
-                     maxLines: 1,
-                     decoration: {
-                        focusedBorder: {
-                           type: "outline",
-                              options: {
-                              borderSide: {
-                                 color: "#50782f",
-                                 width: 10.0
-                              },
-                              borderRadius: 2.1,
-                              },
-               
-                        },
-                        border: {
-                           type: "outline",
-                           options: {
-                           borderSide: {
-                              color: "#4287f5",
-                              width: 3.0
-                           },
-                           borderRadius: 2.1
-                        },
-                        },
-                     }
-                     }, "input")),
-                  new SizedBoxUiElement({height: 24,}),
-                  new ElevatedButtonUiElement({}, undefined, new HttpAction("/action1", {method: "POST"}, [{id: "input", target: "input_value"}]))
-                        .addChild(new TextUiElement({data: "Подтвертить"})),
-                  new SizedBoxUiElement({height: 24,}),
-               ])
-               )
-            )
-         )
-      )
-
-   //create view root and assing child/children to him
-   builder.createRootOfExactType(DuitElementType.column, {})
-      .addChild(sizedBoxWithCentredText)
-
-   //return json string
-   return builder.build();
-}
 
 function createDynamicDuitView() {
    //create UIBuilder instance
@@ -156,16 +94,13 @@ function createDynamicDuitView() {
 
 webSocketServer.on('connection', ws => {
    ws.on('message', m => {
-      // webSocketServer.clients.forEach(client => client.send(m));
       console.log(JSON.parse(m));
    });
 
    ws.on("error", e => ws.send(e));
 
-   setTimeout(() => {
-      ws.send(createDynamicDuitView());
-
-   }, 3000);
+   console.log("connected");
+   ws.send(createDynamicDuitView());
 });
 
 server.listen(8999, () => console.log("Server started"))

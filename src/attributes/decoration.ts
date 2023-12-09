@@ -12,6 +12,6 @@ export interface BoxDecoration {
     border?: BorderSide;
     borderRadius?: number;
     shape?: BoxShape;
-    boxShadow?: BoxShadow;
+    boxShadow?: BoxShadow[];
     gradient?: LinearGradient;
 }

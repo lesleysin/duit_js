@@ -21,7 +21,7 @@ export interface ImageAttributes {
     alignment?: Alignment;
     repeat?: keyof typeof ImageRepeat;
     filterQuality?: keyof typeof FilterQuality;
-    byteData?: Uint8Array;
+    byteData?: Buffer;
     src: string;
     type: keyof typeof ImageType;
 }
