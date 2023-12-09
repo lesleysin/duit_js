@@ -8,8 +8,8 @@ export class ElevatedButtonUiElement extends SingleChildLayout {
     type = DuitElementType.elevatedButton as const;
     attributes: ElevatedButtonAttributes;
 
-    constructor(attrs: ElevatedButtonAttributes, id?: string, action?: BaseAction, controlled?: boolean) {
-        super(id, action, controlled);
+    constructor(attrs: ElevatedButtonAttributes, id?: string, action?: BaseAction) {
+        super(id, action, true);
         this.attributes = attrs;
     }
 }

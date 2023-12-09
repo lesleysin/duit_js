@@ -5,7 +5,7 @@ import { BaseAction } from "../lib/action";
 import { ContainerAttributes } from "../attributes";
 
 export class ContainerUiElement extends SingleChildLayout {
-  type = DuitElementType.decoratedBox as const;
+  type = DuitElementType.container as const;
   attributes: ContainerAttributes;
 
   constructor(attrs: ContainerAttributes, id?: string, action?: BaseAction, controlled?: boolean) {

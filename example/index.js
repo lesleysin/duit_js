@@ -13,6 +13,7 @@ const { ColumnUiElement } = require("duit_js");
 const { randomUUID } = require("crypto");
 const { TextFieldUiElement } = require("duit_js");
 const bodyParser = require("body-parser");
+const form1 = require("./src/form1");
 
 const app = express();
 
@@ -30,6 +31,11 @@ const router = new express.Router();
 router.get("/layout", function (req, res) {
    console.log(req.headers);
    const layout = createDynamicDuitViewHttp();
+   res.status(200).send(layout);
+});
+router.get("/form1", function (req, res) {
+   console.log(req.headers);
+   const layout = form1();
    res.status(200).send(layout);
 });
 router.get("/test1", function (req, res) {

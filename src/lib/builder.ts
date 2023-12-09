@@ -1,4 +1,4 @@
-import { CenterUiElement, ColoredBoxUiElement, ColumnUiElement, RowUiElement, SizedBoxUiElement } from "../widget_models";
+import { CenterUiElement, ColoredBoxUiElement, ColumnUiElement, ExpandedUiElement, RowUiElement, SizedBoxUiElement, StackUiElement } from "../widget_models";
 import DuitElementType from "./element_type";
 
 import type { DuitElement, DuitLayoutElement } from "./element";
@@ -44,6 +44,12 @@ export default class UIBuilder {
       }
       case DuitElementType.center: {
         return this.root = new CenterUiElement(rootAttributes);
+      }
+      case DuitElementType.stack: {
+        return this.root = new StackUiElement(rootAttributes);
+      }
+      case DuitElementType.expanded: {
+        return this.root = new ExpandedUiElement(rootAttributes);
       }
     }
 

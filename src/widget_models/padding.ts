@@ -5,11 +5,11 @@ import type { TextFieldAttributes } from "../attributes";
 import { BaseAction } from "../lib/action";
 
 export class PaddingUiElement extends SingleChildLayout {
-    type = DuitElementType.textField as const;
+    type = DuitElementType.padding as const;
     attributes: TextFieldAttributes;
 
-    constructor(attrs: TextFieldAttributes, id: string, action: BaseAction) {
-        super(id, action, true);
+    constructor(attrs: TextFieldAttributes, id: string, action: BaseAction, controlled?: boolean) {
+        super(id, action, controlled);
         this.attributes = attrs;
     }
 }

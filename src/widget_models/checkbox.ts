@@ -8,8 +8,8 @@ export class CheckBoxUiElement extends DuitLeafElement {
   type = DuitElementType.checkBox as const;
   attributes: CheckboxAttributes;
 
-  constructor(attrs: CheckboxAttributes, id?: string, action?: BaseAction, controlled?: boolean) {
-    super(id, action, controlled);
+  constructor(attrs: CheckboxAttributes, id?: string, action?: BaseAction) {
+    super(id, action, true);
     this.attributes = attrs;
   }
 }
