@@ -1,3 +1,5 @@
+const { TextUiElement } = require("duit_js");
+const { CenterUiElement } = require("duit_js");
 const { DuitView, DuitElementType, DecoratedBoxUiElement } = require("duit_js");
 
 function decoreatedBoxExample() {
@@ -23,7 +25,11 @@ function decoreatedBoxExample() {
                     end: "bottomRight",
                 }
             }
-        })
+        }).addChild(
+            new CenterUiElement({}).addChild(
+                new TextUiElement({data: "Centred text"})
+            )
+        )
     )
 
     return builder.build();

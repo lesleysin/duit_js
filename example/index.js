@@ -12,6 +12,7 @@ const bodyParser = require("body-parser");
 const decoreatedBoxExample = require("./src/dec_box_ex");
 const inputs = require("./src/inputs");
 const imgViewExample = require("./src/img");
+const stackExample = require("./src/stack_example");
 
 const app = express();
 
@@ -70,6 +71,11 @@ router.get("/img", function (req, res) {
    res.status(200).send(layout);
 });
 
+router.get("/stack", function (req, res) {
+   console.log("request stack")
+   const layout = stackExample();
+   res.status(200).send(layout);
+});
 
 app.use(router);
 

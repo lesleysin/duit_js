@@ -1,7 +1,14 @@
-const { ImageUiElement } = require("duit_js");
+const { ImageUiElement, EmptyUiElement } = require("duit_js");
 const { TextUiElement } = require("duit_js");
-const { DuitView, DuitElementType, DecoratedBoxUiElement } = require("duit_js");
+const { DuitView, DuitElementType, CustomTreeElement } = require("duit_js");
 const { readFile, readFileSync } = require("fs");
+
+class ExampleCustomWidget extends CustomTreeElement {
+
+    constructor(attrs, tag, id, action, controlled) {
+       super(attrs, tag, id, action, controlled);
+    }
+ }
 
 function imgViewExample() {
     const builder = DuitView.builder();
@@ -33,7 +40,7 @@ function imgViewExample() {
             height: 350
         }),
         new TextUiElement({
-            data: "Memory image (from butes)"
+            data: "Memory image (from bytes)"
         }),
         new ImageUiElement({
             type: "memory",
@@ -42,6 +49,8 @@ function imgViewExample() {
             width: 350,
             height: 350
         }),
+        new EmptyUiElement(),
+        new ExampleCustomWidget({"random": "SPECIAL TEXT IN CUSTOM WIDGET"}, "ExampleCustomWidget")
     ])
 
     return builder.build();
