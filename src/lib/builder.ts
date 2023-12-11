@@ -82,6 +82,17 @@ export default class UIBuilder {
   build(): string {
     return JSON.stringify(this.root);
   }
+
+  /**
+   * Generates the function comment for the given function body.
+   *
+   * @param {DuitLayoutElement} rootElement - The root element of the DuitLayout.
+   * @return {DuitLayoutElement} The root element of the DuitLayout.
+   */
+  rootFrom(rootElement: DuitLayoutElement): DuitLayoutElement {
+    this.root = rootElement;
+    return this.root;
+  }
 }
 
 const mayHaveChildList = new Set([
