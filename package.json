@@ -1,13 +1,19 @@
 {
   "name": "duit_js",
-  "version": "0.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "JavaScript adapter for Duit Framework - drived UI toolkit for Flutter",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
     "/dist"
   ],
-  "author": "lesleysin",
+  "repository": {
+    "url": "https://github.com/lesleysin/duit_js"
+  },
+  "bugs": {
+    "url": "https://github.com/lesleysin/duit_js/issues"
+  },
+  "author": "lesleysin <https://github.com/lesleysin>",
   "type": "commonjs",
   "license": "MIT",
   "devDependencies": {
