@@ -9,7 +9,6 @@ export interface TextAttributes {
     textDirection?: keyof typeof TextDirection;
     softWrap?: boolean;
     overflow?: keyof typeof TextOverflow;
-    textScaleFactor?: number;
     maxLines?: number;
     semanticsLabel?: string;
     style?: TextStyle;
