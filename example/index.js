@@ -1,7 +1,7 @@
 const http = require("http");
 const express = require("express");
 const WebSocket = require("ws");
-const { DuitView, DuitElementType, ColoredBoxUiElement, UpdateEvent, CustomTreeElement } = require("duit_js");
+const { DuitView, DuitElementType, ColoredBoxUiElement, UpdateEvent, CustomTreeElement, LayoutUpdateEvent } = require("duit_js");
 const { WebSocketAction } = require("duit_js");
 const { SizedBoxUiElement } = require("duit_js");
 const { TextUiElement } = require("duit_js");
@@ -13,6 +13,7 @@ const decoreatedBoxExample = require("./src/dec_box_ex");
 const inputs = require("./src/inputs");
 const imgViewExample = require("./src/img");
 const stackExample = require("./src/stack_example");
+const { layoutUpdate, layoutUpdateEventPayload } = require("./src/update_layout");
 
 const app = express();
 
@@ -75,6 +76,18 @@ router.get("/stack", function (req, res) {
    console.log("request stack")
    const layout = stackExample();
    res.status(200).send(layout);
+});
+
+router.get("/updateExample", function (req, res) {
+   const layout = layoutUpdate();
+   res.status(200).send(layout);
+});
+
+router.get("/updateLayout", function (req, res) {
+   const layout = layoutUpdateEventPayload();
+   const upd = new LayoutUpdateEvent(layout);
+   console.log(upd)
+   res.status(200).send(upd);
 });
 
 app.use(router);
