@@ -4,8 +4,11 @@
   "description": "JavaScript adapter for Duit Framework - drived UI toolkit for Flutter",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc"
+  },
   "files": [
-    "/dist"
+    "dist"
   ],
   "repository": {
     "url": "https://github.com/lesleysin/duit_js"
