@@ -17,7 +17,6 @@ enum DuitElementType {
     checkBox = "CheckBox",
     container = "Container",
     image = "Image",
-    gestureDetector = "GestureDetector",
   }
 
 export default DuitElementType;

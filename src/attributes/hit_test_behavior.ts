@@ -1,1 +1,0 @@
-export type HitTestBehavior = "deferToChild" | "opaque" | "translucent"
