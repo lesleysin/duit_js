@@ -14,6 +14,7 @@ const inputs = require("./src/inputs");
 const imgViewExample = require("./src/img");
 const stackExample = require("./src/stack_example");
 const { layoutUpdate, layoutUpdateEventPayload } = require("./src/update_layout");
+const gestureExample = require("./src/gesture");
 
 const app = express();
 
@@ -88,6 +89,19 @@ router.get("/updateLayout", function (req, res) {
    const upd = new LayoutUpdateEvent(layout);
    console.log(upd)
    res.status(200).send(upd);
+});
+
+router.get("/gesture", function (req, res) {
+   const layout = gestureExample();
+   res.status(200).send(layout);
+});
+
+router.get("/tap", function (req, res) {
+   console.log("tap")
+});
+
+router.get("/longPress", function (req, res) {
+   console.log("longPress")
 });
 
 app.use(router);
