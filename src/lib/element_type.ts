@@ -18,6 +18,7 @@ enum DuitElementType {
     container = "Container",
     image = "Image",
     gestureDetector = "GestureDetector",
+    align = "Align",
   }
 
 export default DuitElementType;

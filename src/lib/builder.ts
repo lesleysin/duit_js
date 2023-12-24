@@ -108,4 +108,6 @@ const mayHaveChildList = new Set([
   DuitElementType.stack,
   DuitElementType.decoratedBox,
   DuitElementType.container,
+  DuitElementType.gestureDetector,
+  DuitElementType.align,
 ]);

@@ -12,3 +12,4 @@ export { CheckboxAttributes } from "./checkbox_attributes";
 export { ContainerAttributes } from "./container_attributes";
 export { ImageAttributes } from "./image_attributes";
 export { GestureDetectorAttributes } from "./gesture_detector_attributes"
+export { AlignAttributes } from "./align_attributes";

@@ -15,4 +15,6 @@ export { DecoratedBoxUiElement } from "./decorated_box";
 export { ContainerUiElement } from "./container";
 export { ImageUiElement } from "./image";
 export { EmptyUiElement } from "./empty";
+export { GestureDetectorUiElement } from "./gesture_detector";
+export { AlignUiElement } from "./align";
 export * from "./custom";
