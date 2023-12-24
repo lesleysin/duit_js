@@ -9,7 +9,7 @@ export class DuitLeafElement {
   protected controlled: boolean;
   protected action: Nullable<BaseAction>;
 
-  constructor(id?: string, action?: BaseAction, controlled?: boolean) {
+  constructor(id?: string, action?: Nullable<BaseAction>, controlled?: boolean) {
     this.controlled = controlled ?? action !== undefined ?? false;
     this.action = action;
     if (id) {
@@ -23,7 +23,7 @@ export class DuitLeafElement {
 export class SingleChildLayout extends DuitLeafElement {
   protected child: Nullable<DuitElement>;
 
-  constructor(id?: string, action?: BaseAction, controlled?: boolean) {
+  constructor(id?: string, action?: Nullable<BaseAction>, controlled?: boolean) {
     super(id, action, controlled);
   }
 
