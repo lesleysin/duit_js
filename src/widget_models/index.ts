@@ -17,4 +17,5 @@ export { ImageUiElement } from "./image";
 export { EmptyUiElement } from "./empty";
 export { GestureDetectorUiElement } from "./gesture_detector";
 export { AlignUiElement } from "./align";
+export { TransformUiElement } from "./transform";
 export * from "./custom";
