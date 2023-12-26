@@ -15,6 +15,7 @@ const imgViewExample = require("./src/img");
 const stackExample = require("./src/stack_example");
 const { layoutUpdate, layoutUpdateEventPayload } = require("./src/update_layout");
 const gestureExample = require("./src/gesture");
+const transfromExample = require("./src/transfrom");
 
 const app = express();
 
@@ -102,6 +103,12 @@ router.get("/tap", function (req, res) {
 
 router.get("/longPress", function (req, res) {
    console.log("longPress")
+});
+
+router.get("/transform", function (req, res) {
+   const layout = transfromExample();
+   console.log(layout);
+   res.status(200).send(layout);
 });
 
 app.use(router);
