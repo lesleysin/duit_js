@@ -20,6 +20,7 @@ enum DuitElementType {
     gestureDetector = "GestureDetector",
     align = "Align",
     transform = "Transform",
+    richText = "RichText",
   }
 
 export default DuitElementType;
