@@ -1,0 +1,1 @@
+export type TextLeadingDistribution = "even" | "italic";
