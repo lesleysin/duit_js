@@ -19,4 +19,5 @@ export { GestureDetectorUiElement } from "./gesture_detector";
 export { AlignUiElement } from "./align";
 export { TransformUiElement } from "./transform";
 export { RichTextUiElement } from "./rich_text";
+export { WrapUiElement } from "./wrap";
 export * from "./custom";

@@ -15,4 +15,5 @@ export { GestureDetectorAttributes } from "./gesture_detector_attributes"
 export { AlignAttributes } from "./align_attributes";
 export { TransformAttributes, TransformType } from "./transform_attributes";
 export { StackAttributes } from "./stack_attributes";
-export { RichTextAttributes } from "./rich_text_attributes"
+export { RichTextAttributes } from "./rich_text_attributes";
+export { WrapAttributes } from "./wrap_attributes"
