@@ -21,6 +21,7 @@ enum DuitElementType {
     align = "Align",
     transform = "Transform",
     richText = "RichText",
+    wrap = "Wrap",
   }
 
 export default DuitElementType;
