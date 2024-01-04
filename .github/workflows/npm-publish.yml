@@ -1,6 +1,7 @@
 name: Publish duit_js
 
 on:
+  workflow_dispatch:
   release:
     types: [created]
 
