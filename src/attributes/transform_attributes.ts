@@ -1,8 +1,7 @@
-import { Alignment } from "./alignment";
-import { FilterQuality } from "./filter_quality";
-import { Offset } from "./offset";
-
-export type TransformType = "scale" | "translate" | "rotate" | "flip";
+import type { Alignment } from "./properties/alignment";
+import type { FilterQuality } from "./properties/filter_quality";
+import type { Offset } from "./properties/offset";
+import type { TransformType } from "./properties/transform_type";
 
 class TransfromBase {
     origin?: Offset;
@@ -37,9 +36,9 @@ type Transfroms = {
     "flip": FlipTransform
 }
 
-type InferTransfrom<T extends TransformType> = Transfroms[T]
+type InferTransfrom<T extends keyof typeof TransformType> = Transfroms[T]
 
-export interface TransformAttributes<T extends TransformType = "scale"> {
+export interface TransformAttributes<T extends keyof typeof TransformType = "scale"> {
     type: T;
     data: InferTransfrom<T>
 }

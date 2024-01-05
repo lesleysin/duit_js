@@ -1,7 +1,7 @@
-import { TextAlign } from "./text_align";
-import { TextDirection } from "./text_direction";
-import { TextOverflow } from "./text_overflow";
-import { TextStyle } from "./text_style";
+import type { TextAlign } from "./properties/text_align";
+import type { TextDirection } from "./properties/text_direction";
+import type { TextOverflow } from "./properties/text_overflow";
+import type { TextStyle } from "./properties/text_style";
 
 export interface TextAttributes {
     data: string;

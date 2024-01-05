@@ -1,8 +1,8 @@
-import { InputBorder } from "./input_border";
-import { InputDecoration } from "./input_decoration";
-import { TextAlign } from "./text_align";
-import { TextDirection } from "./text_direction";
-import { TextStyle } from "./text_style";
+import type { InputBorder } from "./properties/input_border";
+import type { InputDecoration } from "./properties/input_decoration";
+import type { TextAlign } from "./properties/text_align";
+import type { TextDirection } from "./properties/text_direction";
+import type { TextStyle } from "./properties/text_style";
 
 export interface TextFieldAttributes {
     style?: TextStyle;

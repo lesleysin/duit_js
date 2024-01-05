@@ -1,8 +1,8 @@
-import { Axis } from "./alix";
-import { Clip } from "./clip";
-import { TextDirection } from "./text_direction";
-import { VerticalDirection } from "./vertical_direction";
-import { WrapAlignment, WrapCrossAlignment } from "./wrap_alignment";
+import type { Axis } from "./properties/axis";
+import type { Clip } from "./properties/clip";
+import type { TextDirection } from "./properties/text_direction";
+import type { VerticalDirection } from "./properties/vertical_direction";
+import type { WrapAlignment, WrapCrossAlignment } from "./properties/wrap_alignment";
 
 export interface WrapAttributes {
     clipBehavior?: keyof typeof Clip;

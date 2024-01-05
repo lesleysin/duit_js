@@ -1,4 +1,4 @@
-import { BoxDecoration } from "./decoration";
+import type { BoxDecoration } from "./properties/decoration";
 
 export interface DecoratedBoxAttributes {
     decoration: BoxDecoration;

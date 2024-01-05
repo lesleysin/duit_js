@@ -1,12 +1,11 @@
-import { AlignmentDirectional } from "./alignment";
-import { Clip } from "./clip";
-import { TextDirection } from "./text_direction";
-
-type StackFit = "loose" | "expand" | "passthrough";
+import type { AlignmentDirectional } from "./properties/alignment";
+import type { Clip } from "./properties/clip";
+import type { StackFit } from "./properties/stack_fit";
+import type { TextDirection } from "./properties/text_direction";
 
 export interface StackAttributes {
     alignment?: keyof typeof AlignmentDirectional;
     textDirection?: keyof typeof TextDirection;
-    fit?: StackFit;
+    fit?: keyof typeof StackFit;
     clipBehavior?: Clip;
 }

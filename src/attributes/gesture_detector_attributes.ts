@@ -1,6 +1,6 @@
-import { BaseAction } from "../lib/action";
-import { DragStartBehavior } from "./drag_start_behavior";
-import { HitTestBehavior } from "./hit_test_behavior";
+import type { BaseAction } from "../lib/action";
+import type { DragStartBehavior } from "./properties/drag_start_behavior";
+import type { HitTestBehavior } from "./properties/hit_test_behavior";
 
 export interface GestureDetectorAttributes {
     onTap?: BaseAction;
@@ -23,6 +23,6 @@ export interface GestureDetectorAttributes {
     onPanEnd?: BaseAction;
     onPanCancel?: BaseAction;
     excludeFromSemantics?: boolean;
-    dragStartBehavior?: DragStartBehavior;
-    behavior?: HitTestBehavior;
+    dragStartBehavior?: keyof typeof DragStartBehavior;
+    behavior?: keyof typeof HitTestBehavior;
 }

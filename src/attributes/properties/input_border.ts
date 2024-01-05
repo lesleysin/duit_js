@@ -1,7 +1,7 @@
-import { Border, BorderSide } from "./border";
+import type { Border, BorderSide } from "./border";
 
 export interface InputBorder {
-    type: Border;
+    type: keyof typeof Border;
     options?: {
         borderSide?: BorderSide;
         gapPadding: number;

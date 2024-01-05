@@ -1,7 +1,5 @@
-const { ImageUiElement, EmptyUiElement } = require("duit_js");
-const { TextUiElement } = require("duit_js");
-const { DuitView, DuitElementType, CustomTreeElement } = require("duit_js");
-const { readFile, readFileSync } = require("fs");
+const { DuitView, DuitElementType, ImageUiElement, EmptyUiElement, TextUiElement } = require("duit_js");
+const { readFileSync } = require("fs");
 
 class ExampleCustomWidget extends CustomTreeElement {
 
@@ -18,6 +16,7 @@ function imgViewExample() {
     });
 
     const img = readFileSync('assets/vlad_ten.png')
+
 
 
     root.addChildren([

@@ -1,9 +1,9 @@
-import { Color } from "../utils/color"
-import { EdgeInsets } from "../utils/insets"
-import { Alignment } from "./alignment"
-import { BoxConstraints } from "./box_constraits"
-import { Clip } from "./clip"
-import { BoxDecoration } from "./decoration"
+import type { Color } from "../utils/color"
+import type { EdgeInsets } from "../utils/insets"
+import type { Alignment } from "./properties/alignment"
+import type { BoxConstraints } from "./properties/box_constraits"
+import type { Clip } from "./properties/clip"
+import type { BoxDecoration } from "./properties/decoration"
 
 export interface ContainerAttributes {
     constraints?: BoxConstraints

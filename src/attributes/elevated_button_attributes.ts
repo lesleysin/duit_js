@@ -1,4 +1,4 @@
-import { Clip } from "./clip";
+import type { Clip } from "./properties/clip";
 
 export class ElevatedButtonAttributes {
     autofocus?: boolean;

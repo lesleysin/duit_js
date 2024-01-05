@@ -1,4 +1,4 @@
-import { TextLeadingDistribution } from "./text_leading_distribution";
+import type { TextLeadingDistribution } from "./text_leading_distribution";
 
 export interface TextHeightBehavior {
     applyHeightToFirstAscent?: boolean;

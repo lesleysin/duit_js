@@ -1,4 +1,4 @@
-import type { Color } from "../utils/color";
+import type { Color } from "../../utils/color";
 import type { FontWeight } from "./font_weight";
 
 export interface TextStyle {
