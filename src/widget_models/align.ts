@@ -4,7 +4,6 @@ import DuitElementType from "../lib/element_type";
 import type { AlignAttributes } from "../attributes";
 import type { BaseProps } from "./props";
 
-
 export class AlignUiElement extends SingleChildLayout {
   type = DuitElementType.align as const;
   attributes: AlignAttributes;
