@@ -1,6 +1,6 @@
-import { Color } from "../utils/color";
-import { BlurStyle } from "./blur_style";
-import { Offset } from "./offset";
+import type { Color } from "../../utils/color";
+import type { BlurStyle } from "./blur_style";
+import type { Offset } from "./offset";
 
 /**
  * @see https://api.flutter.dev/flutter/painting/BoxShadow-class.html
@@ -10,5 +10,5 @@ export interface BoxShadow {
     offset?: Offset;
     blurRadius?: number;
     spreadRadius?: number;
-    blurStyle?: BlurStyle;
+    blurStyle?: keyof typeof BlurStyle;
 }

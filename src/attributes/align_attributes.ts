@@ -1,4 +1,4 @@
-import { Alignment } from "./alignment";
+import type { Alignment } from "./properties/alignment";
 
 export interface AlignAttributes {
     alignment: keyof typeof Alignment;

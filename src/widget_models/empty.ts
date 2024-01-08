@@ -1,4 +1,4 @@
-import { DuitLeafElement, SingleChildLayout } from "./child";
+import { DuitLeafElement } from "./child";
 import DuitElementType from "../lib/element_type";
 
 export class EmptyUiElement extends DuitLeafElement {
@@ -8,3 +8,5 @@ export class EmptyUiElement extends DuitLeafElement {
     super(undefined, undefined, true);
   }
 }
+
+export const Empty = () => new EmptyUiElement();

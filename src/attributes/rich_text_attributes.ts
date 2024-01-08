@@ -1,13 +1,13 @@
-import { Color } from "../utils/color";
-import { StrutStyle } from "./strut_style";
-import { TextAlign } from "./text_align";
-import { TextDirection } from "./text_direction";
-import { TextHeightBehavior } from "./text_height_behavior";
-import { TextOverflow } from "./text_overflow";
-import { TextScaler } from "./text_scaler";
-import { TextSpan } from "./text_span";
-import { TextStyle } from "./text_style";
-import { TextWidghtBasis } from "./text_wigth_basis";
+import type { Color } from "../utils/color";
+import type { StrutStyle } from "./properties/strut_style";
+import type { TextAlign } from "./properties/text_align";
+import type { TextDirection } from "./properties/text_direction";
+import type { TextHeightBehavior } from "./properties/text_height_behavior";
+import type { TextOverflow } from "./properties/text_overflow";
+import type { TextScaler } from "./properties/text_scaler";
+import type { TextSpan } from "./properties/text_span";
+import type { TextStyle } from "./properties/text_style";
+import type { TextWidghtBasis } from "./properties/text_wigth_basis";
 
 export interface RichTextAttributes {
     textSpan?: TextSpan;

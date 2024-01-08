@@ -1,7 +1,7 @@
-import { Color } from "../utils/color";
-import { EdgeInsets } from "../utils/insets";
-import { InputBorder } from "./input_border";
-import { TextStyle } from "./text_style";
+import type { Color } from "../../utils/color";
+import type { EdgeInsets } from "../../utils/insets";
+import type { InputBorder } from "./input_border";
+import type { TextStyle } from "./text_style";
 
 export interface InputDecoration {
     labelText?: string;

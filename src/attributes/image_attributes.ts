@@ -1,10 +1,10 @@
-import { Color } from "../utils/color";
-import { Alignment } from "./alignment";
-import { BlendMode } from "./blend_mode";
-import { BoxFit } from "./box_fit";
-import { FilterQuality } from "./filter_quality";
-import { ImageRepeat } from "./image_repeat";
-import { ImageType } from "./image_type";
+import type { Color } from "../utils/color";
+import type { Alignment } from "./properties/alignment";
+import type { BlendMode } from "./properties/blend_mode";
+import type { BoxFit } from "./properties/box_fit";
+import type { FilterQuality } from "./properties/filter_quality";
+import type { ImageRepeat } from "./properties/image_repeat";
+import type { ImageType } from "./properties/image_type";
 
 export interface ImageAttributes {
     width?: number;

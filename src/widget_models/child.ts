@@ -43,7 +43,7 @@ export class SingleChildLayout extends DuitLeafElement {
 export class MultiChildLayout extends DuitLeafElement {
   protected children: Nullable<DuitElement[]> = [];
 
-  constructor(id?: string, action?: BaseAction, controlled?: boolean) {
+  constructor(id?: string, action?: Nullable<BaseAction>, controlled?: boolean) {
     super(id, action, controlled);
   }
 

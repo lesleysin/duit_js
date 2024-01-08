@@ -1,7 +1,7 @@
-import { Color } from "../utils/color";
-import { BorderSide } from "./border";
-import { MaterialStateProperty } from "./material_state";
-import { VisualDensity } from "./visual_density";
+import type { Color } from "../utils/color";
+import type { BorderSide } from "./properties/border";
+import type { MaterialStateProperty } from "./properties/material_state";
+import type { VisualDensity } from "./properties/visual_density";
 
 export interface CheckboxAttributes {
     value: boolean;

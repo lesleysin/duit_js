@@ -1,9 +1,9 @@
-import type { Clip } from "./clip";
-import type { CrossAxisAlignment } from "./cross_axis_alignment";
-import type { MainAxisAlignment } from "./main_axis_alignment";
-import type { MainAxisSize } from "./main_axis_size";
-import type { TextDirection } from "./text_direction";
-import type { VerticalDirection } from "./vertical_direction";
+import type { Clip } from "./properties/clip";
+import type { CrossAxisAlignment } from "./properties/cross_axis_alignment";
+import type { MainAxisAlignment } from "./properties/main_axis_alignment";
+import type { MainAxisSize } from "./properties/main_axis_size";
+import type { TextDirection } from "./properties/text_direction";
+import type { VerticalDirection } from "./properties/vertical_direction";
 
 export interface FlexAttributes {
   mainAxisAlignment?: keyof typeof MainAxisAlignment;
