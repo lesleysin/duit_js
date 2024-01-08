@@ -23,3 +23,4 @@ export * from "./vertical_direction";
 export * from "./wrap_alignment";
 export * from "./text_wigth_basis";
 export * from "./text_leading_distribution";
+export * from "./transform_type";
